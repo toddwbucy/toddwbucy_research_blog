@@ -3,8 +3,6 @@ title: "About"
 weight: 100
 ---
 
-# About
-
 I'm Todd W. Bucy. I write about machine learning, constraint theory, and the conveyance hypothesis — a research program exploring how informational structures emerge under constraint and what that implies for the design of statefulness in artificial systems.
 
 This blog is the canonical home for my long-form work. Practitioner-shaped pieces are cross-posted to [Medium](https://medium.com/) with the canonical URL pointing back here.

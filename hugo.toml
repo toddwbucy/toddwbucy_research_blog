@@ -68,30 +68,11 @@ enableRobotsTXT = true
   BookPortableLinks = true
 
 [menu]
-  [[menu.before]]
-    name = "Blog"
-    pageRef = "/blog/"
-    weight = 10
-  [[menu.before]]
-    name = "Papers"
-    pageRef = "/papers/"
-    weight = 20
-  [[menu.before]]
-    name = "Framework"
-    pageRef = "/framework/"
-    weight = 30
-  [[menu.before]]
-    name = "Projects"
-    pageRef = "/projects/"
-    weight = 40
-  [[menu.before]]
-    name = "Archive"
-    pageRef = "/archive/"
-    weight = 50
-  [[menu.after]]
-    name = "About"
-    pageRef = "/about/"
-    weight = 10
+  # Blog/Papers/Framework/Projects/Archive/About are auto-rendered in the
+  # sidebar from content/<section>/ by Hugo Book's filetree menu. Adding
+  # them here would render each twice (flat copy from menu.before/after,
+  # plus the collapsible filetree copy). Reserve [menu.*] for items that
+  # have no content directory — e.g. external links.
   [[menu.after]]
     name = "GitHub"
     url = "https://github.com/toddwbucy/toddwbucy_research_blog"
