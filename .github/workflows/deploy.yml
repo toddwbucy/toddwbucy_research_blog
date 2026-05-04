@@ -20,16 +20,10 @@
 
 name: Deploy Hugo site to GitHub Pages
 
-# DISABLED: this workflow is parked until GitHub Pages is enabled in the
-# repo settings (Settings → Pages → Source: GitHub Actions). To activate,
-# uncomment the `push` trigger below — that's the only change needed.
-#
-# on:
-#   push:
-#     branches:
-#       - main
-#   workflow_dispatch:
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 concurrency:
