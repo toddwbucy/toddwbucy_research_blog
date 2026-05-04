@@ -21,6 +21,7 @@ abstract: |
   you cannot ship a paradigm that requires infrastructure that doesn't
   exist yet.
 medium_url: ""
+canonical_url: "https://medium.com/stackademic/google-didnt-go-silent-you-stopped-looking-17f9acf98ff1"
 ---
 
 ![](/images/blog/google-didnt-go-silent/image1.jpg)

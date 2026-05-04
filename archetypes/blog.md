@@ -8,6 +8,10 @@ tags: []
 abstract: |
   One- or two-sentence abstract for SEO and listing pages.
 medium_url: ""        # populate after cross-posting to Medium
+canonical_url: ""     # set ONLY if this article was first published elsewhere
+                      # (e.g. Stackademic, Medium) and that venue should remain
+                      # the canonical source. Leaving blank means the blog is
+                      # canonical, which is the default for new posts.
 ---
 
 <!--

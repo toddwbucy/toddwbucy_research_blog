@@ -23,6 +23,7 @@ abstract: |
   that distinction, we keep building Level B solutions and calling
   them Level C achievements.
 medium_url: ""
+canonical_url: "https://blog.stackademic.com/nobody-knows-what-an-agent-is-and-that-is-the-problem-74d088a760bf"
 ---
 
 ![](/images/blog/nobody-knows-what-an-agent-is/image2.jpg)
