@@ -1,0 +1,28 @@
+{{- /*
+  Override of Hugo Book's render-image.html. Applies a baseURL-path
+  prefix to site-absolute paths like `/images/...` so they resolve
+  correctly under subdirectory deploys (e.g. GitHub Pages at
+  username.github.io/repo-name/).
+
+  Hugo gotcha: both `relURL` and `absURL` strip the baseURL path when
+  the input starts with `/`. The workaround is to TrimPrefix `/` first,
+  then apply `relURL`, which then injects the path correctly.
+
+  External URLs (http://, https://, //, mailto:, etc.) and intra-page
+  fragments (#anchor) are passed through unchanged.
+*/ -}}
+{{- $destination := .Destination -}}
+
+{{- if .Page.Site.Params.BookPortableLinks -}}
+  {{- $destination = partial "docs/links/portable-image" . -}}
+{{- end -}}
+
+{{- $isSiteAbsolute := and
+      (hasPrefix $destination "/")
+      (not (hasPrefix $destination "//")) -}}
+{{- if $isSiteAbsolute -}}
+  {{- $destination = strings.TrimPrefix "/" $destination | relURL -}}
+{{- end -}}
+
+<img src="{{ $destination | safeURL }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }}/>
+{{- /**/ -}}
