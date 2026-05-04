@@ -1,0 +1,31 @@
+{{- /*
+  {{< version-banner >}} — renders a banner at the top of framework
+  documents indicating version, supersession status, and links to
+  predecessors/successors.
+
+  Reads from page front matter:
+    version, status, supersedes, superseded_by
+
+  Usage (typically as the first line under the title):
+    {{< version-banner >}}
+*/ -}}
+
+{{- $version := default "v1" .Page.Params.version -}}
+{{- $status := default "published" .Page.Params.status -}}
+{{- $supersedes := .Page.Params.supersedes -}}
+{{- $supersededBy := .Page.Params.superseded_by -}}
+
+{{- $isCurrent := and (ne $status "superseded") (eq $supersededBy "") -}}
+{{- $bgColor := cond $isCurrent "#ecfdf5" "#fef3c7" -}}
+{{- $borderColor := cond $isCurrent "#10b981" "#f59e0b" -}}
+{{- $label := cond $isCurrent "Current version" "Superseded" -}}
+
+<aside class="version-banner" style="margin: 0 0 1.5em; padding: 0.75em 1em; border-left: 4px solid {{ $borderColor }}; background: {{ $bgColor }}; color: #1f2937; font-size: 0.92em; border-radius: 3px;">
+  <strong>{{ $label }}</strong> &middot; {{ $version }}
+  {{- with $supersedes }}
+    &middot; supersedes <a href="{{ . }}">previous version</a>
+  {{- end }}
+  {{- with $supersededBy }}
+    &middot; superseded by <a href="{{ . }}"><strong>newer version &rarr;</strong></a>
+  {{- end }}
+</aside>

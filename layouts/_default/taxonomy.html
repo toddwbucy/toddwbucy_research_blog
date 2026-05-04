@@ -1,0 +1,20 @@
+{{ define "main" }}
+<article class="markdown book-article">
+  <h1>{{ .Type | humanize }}</h1>
+
+  {{ with .Content }}
+    <div class="book-article-content markdown-inner">{{ . }}</div>
+  {{ end }}
+
+  <ul class="book-tag-cloud" style="list-style: none; padding-left: 0;">
+    {{ range .Pages.ByTitle }}
+      <li style="display: inline-block; margin: 0.25em 0.5em 0.25em 0;">
+        <a href="{{ .RelPermalink }}" style="padding: 0.25em 0.6em; border: 1px solid var(--gray-200, #e5e7eb); border-radius: 3px;">
+          {{ .Title }}
+          <span style="opacity: 0.6; margin-left: 0.3em;">({{ len .Pages }})</span>
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</article>
+{{ end }}

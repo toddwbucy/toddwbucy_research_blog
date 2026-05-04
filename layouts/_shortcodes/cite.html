@@ -1,0 +1,33 @@
+{{- /*
+  {{< cite >}} — renders a "Cite this" block at the bottom of a paper or
+  framework page. Reads cite.bibtex from front matter; falls back to a
+  generated minimal entry if absent.
+
+  Usage in markdown (typically as the last line of a paper):
+    {{< cite >}}
+*/ -}}
+
+{{- $bibtex := "" -}}
+{{- with .Page.Params.cite -}}
+  {{- with .bibtex -}}{{- $bibtex = . -}}{{- end -}}
+{{- end -}}
+
+{{- if not $bibtex -}}
+  {{- $year := .Page.Date.Year -}}
+  {{- $author := default .Site.Params.author (index .Page.Params "authors" 0) -}}
+  {{- $title := .Page.Title -}}
+  {{- $url := .Page.Permalink -}}
+  {{- $key := printf "%s%d" (lower (replaceRE "[^A-Za-z]" "" $title) | truncate 16 "") $year -}}
+  {{- $bibtex = printf "@article{%s,\n  title  = {%s},\n  author = {%s},\n  year   = {%d},\n  url    = {%s}\n}" $key $title $author $year $url -}}
+{{- end -}}
+
+<aside class="cite-block" style="margin-top: 3em; padding: 1.25em 1.5em; border: 1px solid var(--gray-200, #e5e7eb); border-left: 4px solid var(--color-link, #3b82f6); border-radius: 4px; background: var(--gray-100, #f9fafb);">
+  <strong style="display: block; margin-bottom: 0.5em; font-size: 0.95em;">Cite this</strong>
+  <details>
+    <summary style="cursor: pointer; font-size: 0.9em; opacity: 0.85;">BibTeX</summary>
+<pre style="margin-top: 0.75em; font-size: 0.85em;"><code>{{ $bibtex | safeHTML }}</code></pre>
+  </details>
+  <p style="margin: 0.5em 0 0; font-size: 0.85em; opacity: 0.75;">
+    Permalink: <a href="{{ .Page.Permalink }}">{{ .Page.Permalink }}</a>
+  </p>
+</aside>

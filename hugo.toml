@@ -1,0 +1,98 @@
+# ============================================================================
+# Site Configuration — Todd W. Bucy Research Blog
+# ============================================================================
+# Stack: Hugo + Hugo Book theme (git submodule at themes/book)
+# Hosting: GitHub Pages (Phase 1) → Cloudflare Pages once a custom domain
+# is purchased (Phase 2+). Build pipeline is host-agnostic; only the
+# `.github/workflows/deploy.yml` file is GitHub-Pages-specific.
+# ============================================================================
+
+# baseURL is overridden by the GitHub Actions workflow at build time
+# (set to the Pages URL via `hugo --baseURL`). Value below is the
+# local-development fallback.
+baseURL = "http://localhost:1313/"
+
+defaultContentLanguage = "en"
+locale = "en-us"
+
+title = "Todd W. Bucy — Research Blog"
+theme = "book"
+
+[markup]
+  [markup.goldmark.renderer]
+    # Required by KaTeX shortcode and any inline HTML in long-form posts.
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+  [markup.highlight]
+    style = "base16-snazzy"
+    lineNos = false
+
+disablePathToLower = false
+enableGitInfo = true
+enableRobotsTXT = true
+
+# RSS / Atom feeds emitted automatically per-section at e.g. /blog/index.xml.
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+# `series` lets papers link into multi-part research arcs.
+[taxonomies]
+  tag = "tags"
+  series = "series"
+  category = "categories"
+
+# ----------------------------------------------------------------------------
+# Author / byline / citation defaults
+# ----------------------------------------------------------------------------
+# Centralized so a future re-attribution (e.g. transferring published work
+# under a research-foundation entity) is a one-line change here, not a
+# bulk-edit across every paper's front matter.
+[params]
+  author = "Todd W. Bucy"
+  authorEmail = "todd@bucy-medrano.me"
+  description = "Long-form research and practitioner writing on machine learning, constraint theory, and the conveyance hypothesis."
+
+  license = "CC BY 4.0"
+  licenseURL = "https://creativecommons.org/licenses/by/4.0/"
+
+  # Hugo Book theme params
+  BookTheme = "auto"
+  BookSection = "/"
+  BookToC = true
+  BookRepo = "https://github.com/toddwbucy/toddwbucy_research_blog"
+  BookEditPath = "edit/main"
+  BookSearch = true
+  BookPortableLinks = true
+
+[menu]
+  [[menu.before]]
+    name = "Blog"
+    pageRef = "/blog/"
+    weight = 10
+  [[menu.before]]
+    name = "Papers"
+    pageRef = "/papers/"
+    weight = 20
+  [[menu.before]]
+    name = "Framework"
+    pageRef = "/framework/"
+    weight = 30
+  [[menu.before]]
+    name = "Projects"
+    pageRef = "/projects/"
+    weight = 40
+  [[menu.before]]
+    name = "Archive"
+    pageRef = "/archive/"
+    weight = 50
+  [[menu.after]]
+    name = "About"
+    pageRef = "/about/"
+    weight = 10
+  [[menu.after]]
+    name = "GitHub"
+    url = "https://github.com/toddwbucy/toddwbucy_research_blog"
+    weight = 20

@@ -1,0 +1,28 @@
+# Hugo build output — regenerated on every build, never commit
+public/
+resources/_gen/
+.hugo_build.lock
+
+# Local Hugo cache and node_modules (if any tooling is added later)
+.cache/
+node_modules/
+
+# Editor / OS noise
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# Pagefind index (generated in Phase 3)
+/static/pagefind/
+
+# Local-only env files (none expected, but defensive)
+.env
+.env.local
+
+# Source documents — converted to Markdown and not tracked.
+# The Markdown version under content/ is the canonical version.
+*.docx
+*.doc
+*.odt
