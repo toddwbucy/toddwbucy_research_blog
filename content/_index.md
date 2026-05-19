@@ -5,14 +5,12 @@ type: docs
 
 # Welcome
 
-This is the canonical home for my technical and philosophical writing. Practitioner-shaped pieces are cross-posted to Medium with the canonical URL pointing back here; long-form papers and framework documents live exclusively on the blog.
+This is the canonical home for my technical and philosophical writing. Practitioner-shaped pieces are cross-posted to Medium with the canonical URL pointing back here; project-level technical and theoretical material lives under Projects.
 
 ## Where to start
 
-- **[Papers](/papers/)** — long-form technical and philosophical work, organized by series. Each paper has citation-ready metadata and a stable URL.
-- **[Framework](/framework/)** — living framework documents that get versioned over time. Older versions are preserved in the Archive for citation continuity.
-- **[Blog](/blog/)** — shorter practitioner articles and updates. Most are also on Medium with a canonical link back to the version here.
-- **[Projects](/projects/)** — public-facing writing about ongoing work, organized by project.
+- **[Blog](/blog/)** — practitioner articles and updates on AI architecture, agent design, and the engineering choices behind sustained agency. Most are cross-posted to Medium with the canonical link pointing back here.
+- **[Projects](/projects/)** — ongoing work. **[WeaverTools](/projects/weavertools/)** is the active research platform: technical reports, design updates, and the project's anchoring hypothesis live here, separate from the practitioner-facing blog.
 - **[About](/about/)** — bio and current focus.
 
 ## Recent
