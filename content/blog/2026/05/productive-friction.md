@@ -1,9 +1,9 @@
 ---
 title: "Productive Friction: The Variable You're Already Trying to Control"
 date: 2026-05-17
-draft: false
+draft: true
 type: "post"
-status: "published"
+status: "draft"
 tags: ["ai", "agents", "llm", "architecture", "deliberation", "productive-friction"]
 abstract: |
   Part 2 of a 3-article series on agent memory architecture. Names productive friction as the variable practitioners are already trying to control without measuring, gives a 2×2 diagnostic separating it from latency, and walks through the four architectural scales where the same structural condition produces a different failure signature.

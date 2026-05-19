@@ -1,9 +1,9 @@
 ---
 title: "Slow Is Fast: What the SPU Actually Is"
 date: 2026-05-18
-draft: false
+draft: true
 type: "post"
-status: "published"
+status: "draft"
 tags: ["ai", "agents", "llm", "architecture", "inference", "hardware", "spu"]
 abstract: |
   Article 1 of a follow-up series examining each component of the agent memory architecture. The SPU is not the bare model — it is what the model becomes when integrated into a specific agent's architecture. This article examines what the SPU actually contains, why peak decoder throughput is the wrong optimization target, and what the computational-topology design space looks like.

@@ -1,9 +1,9 @@
 ---
 title: "Why The Architecture Isn't Shipping: Autopoietic Agents in an Autocatalytic World"
 date: 2026-05-17
-draft: false
+draft: true
 type: "post"
-status: "published"
+status: "draft"
 tags: ["ai", "agents", "llm", "autopoiesis", "systems-theory", "infrastructure"]
 abstract: |
   Part 3 of a 3-article series on agent memory architecture. The architecture isn't shipping at scale not because nobody knows how, but because what it produces is autopoietic, and existing SaaS infrastructure was built to deploy autocatalytic systems. Names the operational consequences — billing, replacement, scaling, the operator–agent asymmetry, the economics of value over time — that follow once the distinction is held clearly.
