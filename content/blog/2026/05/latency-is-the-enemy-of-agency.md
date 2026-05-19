@@ -107,10 +107,6 @@ Bucy, T. W. (2026). *Nobody Knows What an Agent Is and That Is the Problem.* Sta
 
 Bucy, T. W. (2026). *Your Model Has Humanity's Cortex. It Needs Its Own Hippocampus.* Todd W. Bucy Research Blog.
 
-Bucy, T. W. (2026). *Productive Friction: The Variable You're Already Trying to Control.* Todd W. Bucy Research Blog.
-
-Bucy, T. W. (2026). *Why The Architecture Isn't Shipping: Autopoietic Agents in an Autocatalytic World.* Todd W. Bucy Research Blog.
-
 Bucy, T. W. (2026). *The Agent is a Cell: Cellular Individuation as Architectural Commitment.* Todd W. Bucy Research Blog.
 
 Bucy, T. W. (2026). *Your Latency Intuitions Are Calibrated for the Cloud.* Todd W. Bucy Research Blog.
