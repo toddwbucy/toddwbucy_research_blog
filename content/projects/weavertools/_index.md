@@ -15,7 +15,7 @@ This section holds the project's non-blog material: the hypothesis document that
 
 ## What lives here
 
-- **Hypothesis document** — the anchoring statement of what WeaverTools is testing and why. *(In preparation.)*
+- **Hypothesis document** — [the anchoring statement](/projects/weavertools/hypothesis/) of what WeaverTools is testing and why. *(Draft — under active revision.)*
 - **Technical reports** — implementation retrospectives, benchmark results, design decisions with their reasoning preserved.
 - **Updates** — periodic notes on where the build sits, what's working, what's been deferred.
 - **Theoretical pieces** — material that belongs to the project rather than to the blog series, including drafts that may eventually be promoted to standalone articles.

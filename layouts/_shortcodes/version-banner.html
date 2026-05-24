@@ -15,10 +15,20 @@
 {{- $supersedes := .Page.Params.supersedes -}}
 {{- $supersededBy := .Page.Params.superseded_by -}}
 
-{{- $isCurrent := and (ne $status "superseded") (eq $supersededBy "") -}}
-{{- $bgColor := cond $isCurrent "#ecfdf5" "#fef3c7" -}}
-{{- $borderColor := cond $isCurrent "#10b981" "#f59e0b" -}}
-{{- $label := cond $isCurrent "Current version" "Superseded" -}}
+{{- $isDraft := eq $status "draft" -}}
+{{- $isSuperseded := or (eq $status "superseded") (ne $supersededBy "") -}}
+{{- $bgColor := "#ecfdf5" -}}
+{{- $borderColor := "#10b981" -}}
+{{- $label := "Current version" -}}
+{{- if $isDraft -}}
+  {{- $bgColor = "#fef3c7" -}}
+  {{- $borderColor = "#f59e0b" -}}
+  {{- $label = "Draft" -}}
+{{- else if $isSuperseded -}}
+  {{- $bgColor = "#fef3c7" -}}
+  {{- $borderColor = "#f59e0b" -}}
+  {{- $label = "Superseded" -}}
+{{- end -}}
 
 <aside class="version-banner" style="margin: 0 0 1.5em; padding: 0.75em 1em; border-left: 4px solid {{ $borderColor }}; background: {{ $bgColor }}; color: #1f2937; font-size: 0.92em; border-radius: 3px;">
   <strong>{{ $label }}</strong> &middot; {{ $version }}
