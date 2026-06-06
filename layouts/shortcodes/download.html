@@ -1,0 +1,16 @@
+{{- /*
+  download — emit an <a> to a site-absolute static asset path with the
+  correct baseURL path injected, so links work under subdirectory deploys
+  (GitHub Pages at username.github.io/repo-name/) regardless of whether the
+  current page URL has a trailing slash.
+
+  Mirrors layouts/_markup/render-image.html: relURL/absURL strip the baseURL
+  path when the input starts with "/", so TrimPrefix "/" first, then relURL
+  injects the path correctly.
+
+  Usage:
+    {{< download href="/archive/<slug>/<file>.pdf" text="<strong>Download…</strong>" >}}
+*/ -}}
+{{- $href := relURL (strings.TrimPrefix "/" (.Get "href")) -}}
+<a href="{{ $href }}"{{ with .Get "class" }} class="{{ . }}"{{ end }}>{{ .Get "text" | safeHTML }}</a>
+{{- /**/ -}}

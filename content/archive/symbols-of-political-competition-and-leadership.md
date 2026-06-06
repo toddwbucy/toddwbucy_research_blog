@@ -27,7 +27,7 @@ cite:
 
 *Undergraduate Honors Thesis (Tier 2 Honors), Department of Anthropology, University of Texas at San Antonio. Submitted 22 June 2007. Thesis advisor: Dr. James McDonald. Readers: Dr. Donald V. Kurtz and Dr. Luz Pérez-Prado.*
 
-[**Download the original scanned thesis (PDF, 56 pp.)**](symbols-of-political-competition-and-leadership-2007.pdf)
+{{< download href="/archive/symbols-of-political-competition-and-leadership/symbols-of-political-competition-and-leadership-2007.pdf" text="<strong>Download the original scanned thesis (PDF, 56 pp.)</strong>" >}}
 
 ---
 
