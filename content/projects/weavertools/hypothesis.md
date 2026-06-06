@@ -4,7 +4,7 @@ date: 2026-06-05
 draft: false
 type: "framework"
 status: "draft"
-version: "DRAFT v05.0 — 2026-06-05"
+version: "DRAFT v05.1 — 2026-06-05"
 tags: ["weavertools", "ai-architecture", "agents", "heteropoietic-agency", "autopoiesis", "individuation", "philosophy-of-mind"]
 abstract: |
   The Heteropoietic Agency Hypothesis (HAH) claims that a distinct class of artificial agency — heteropoietic, individuated, autonomically coordinated, and identity-continuous through accumulated experience — is producible through a single architectural commitment to individuation, serves workload classes that current stateless infrastructure serves poorly or only at high cost, and is meaningfully distinct from both AGI and ANI framings. This is the canonical statement of the hypothesis: the propositions composing it, the predictions that would confirm or falsify each, and the empirical program. WeaverTools is the experimental apparatus testing it.
@@ -16,7 +16,7 @@ cite:
       title  = {The Heteropoietic Agency Hypothesis},
       author = {Bucy, Todd W.},
       year   = {2026},
-      note   = {Framework document, draft v05.0},
+      note   = {Framework document, draft v05.1},
       url    = {https://toddwbucy.github.io/toddwbucy_research_blog/projects/weavertools/hypothesis/}
     }
 ---
@@ -25,7 +25,7 @@ cite:
 
 **A Falsifiable Proposition About a Distinguishable Class of Artificial Agency**
 
-*Foundational document. Author: Todd W. Bucy. Draft v05.0 — 2026-06-05. Status: active research program. This document is the canonical statement of the Heteropoietic Agency Hypothesis (HAH). The articles in the accompanying publication series develop specific aspects for broader audiences. WeaverTools is the implementation testing the hypothesis empirically.*
+*Foundational document. Author: Todd W. Bucy. Draft v05.1 — 2026-06-05. Status: active research program. This document is the canonical statement of the Heteropoietic Agency Hypothesis (HAH). The articles in the accompanying publication series develop specific aspects for broader audiences. WeaverTools is the implementation testing the hypothesis empirically.*
 
 ---
 
@@ -39,6 +39,8 @@ cite:
 4. It is meaningfully different from both general intelligence (AGI) and narrow intelligence (ANI) framings.
 
 The hypothesis is testable through implementation work and falsifiable through specific predictions about how individuated architectures behave under sustained operation. It is developed in intellectual contrast with autopoietic biology (Maturana-Varela), Shannon-Weaver communication theory, and Prigogine's dissipative structures analysis. The autopoietic tradition is engaged as the conceptual reference point that defines heteropoietic by contrast.
+
+A consequence bears directly on governance: because the boundary is other-produced and identity is substrate-resident in an operator-owned, inspectable substrate, that identity is auditable and editable by construction, a surface for inspection and correction that systems carrying identity in opaque model weights do not provide.
 
 The document is organized as a research paper. The **Introduction** states the problem and adopts Warren Weaver's three-level model of communication as the diagnostic instrument used throughout. It locates the shared cause of the failure modes it surveys in a single structural choice, conducting an agent's internal communication over the network that is its environment, of which the stateless SaaS deployment model is the commercial form rather than the root. The **Literature review** positions the framework against adjacent research. The **Theory** section states the hypothesis: what a heteropoietic agent is, whether it establishes individuation over operational time, and to what extent that individuation shapes the agent's operation. The **Conclusion** restates the hypothesis formally. **Appendix A** specifies the experimental program, with each experiment listed individually.
 
@@ -289,6 +291,8 @@ This document is an experimental ethnography of AI architecture. It constructs a
 The framework can press quantification further than the social sciences usually can, and the reason is specific. The social sciences qualify heavily because their subjects are opaque, non-reproducible, and silent about their own histories. You cannot read a mind, you cannot clone a person and run the same life twice, and you never hold ground truth about what a subject has experienced. The structure has to be inferred from behavior, and disciplined inference is qualification. For an agent constructed the way this framework constructs one, those three barriers largely fall. The accumulated state is logged and readable. The operational history is ground truth because the system recorded it. The subject is forkable, which is why the twin experiment (Appendix A.4) is not a clever proxy for a controlled study but the controlled study itself, the matched-pair design human social science can never run. In the terms of the framework's critical-realist commitments, the generative mechanism moves out of the inferred and into the observed, for the parts that were built.
 
 This reach is not accidental. The framework located individuation in the substrate, in the persistent state, the provenance metadata, the axiomatic anchors, and the consolidation record, all observable by construction. Had individuation been placed only in the trained engine's internal representations, the framework would be back in social-science opacity, inferring identity from output. The decision to make memory and identity substrate-resident is the same decision that makes individuation measurable. Design and tractability are one choice.
+
+The same decision has a second consequence the framework treats as load-bearing. A substrate-resident identity in an operator-owned, inspectable substrate is auditable and editable by construction. The operator can read what the agent has accumulated, its policy, its axiom weighting, its memory and provenance, and can correct it through the harness's governance operations. This inverts what the term heteropoietic might suggest. A fully autopoietic system would be opaque and ungovernable by construction, since its identity would reside in its own self-produced internals, which no outside party owns or can read. The framework's identity is legible and correctable precisely because the boundary is other-produced and the substrate is operator-owned. The otherness that makes the agent substrate-bound is the same otherness that makes it governable. This is a governance surface rather than solved alignment, a precondition for alignment work rather than its achievement, and it has two sides that hold together: the agent resists one-off adversarial injection by provenance weight (failure mode 4) while remaining auditable and editable by the legitimate operator. Resistant to the adversary, correctable by the owner.
 
 The reach has limits, and naming them precisely is what keeps the framework honest rather than triumphalist. Three things transparency does not convert into measurement. First, the transparency is into the constructed substrate, not the trained engine. The substrate is observable, the engine is a black box interpretability has not opened, so the line between what the framework measures and what it qualifies tracks the line between what was built to be observable and what was trained and cannot be read. Second, the significance of a measure is a judgment, not a reading. The framework can record that two agents diverge by a given percentage on a given dimension. Whether that magnitude is a distinct identity or the same agent under noise is an interpretive call, disciplined by a pre-registered threshold so it is committed in advance and can be wrong, but not made by the measurement on its own. Third, and most important, quality is qualitative no matter how much is logged. Whether an individuated agent is good, a better collaborator, a better coder, a worthwhile entity, is not a hidden internal variable the framework failed to read. A model can top a benchmark and still be the worse coder, and every practitioner knows it. The framework does not mistake its ability to quantify the internals for an ability to quantify the quality. Transparency of mechanism is not quantifiability of quality.
 
