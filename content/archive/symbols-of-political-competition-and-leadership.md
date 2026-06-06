@@ -13,6 +13,7 @@ abstract: |
 supersedes: ""
 superseded_by: ""
 medium_url: ""
+aliases: ["/papers/symbols-of-political-competition-and-leadership/"]
 cite:
   bibtex: |
     @misc{bucy2007symbols,
@@ -20,7 +21,7 @@ cite:
       author = {Bucy, Todd W.},
       year   = {2007},
       note   = {Undergraduate honors thesis, Department of Anthropology, University of Texas at San Antonio},
-      url    = {https://toddwbucy.github.io/toddwbucy_research_blog/papers/symbols-of-political-competition-and-leadership/}
+      url    = {https://toddwbucy.github.io/toddwbucy_research_blog/archive/symbols-of-political-competition-and-leadership/}
     }
 ---
 
@@ -99,7 +100,7 @@ Author's translation:
 
 After a very methodical three-year investigation, Attorney General Macedo de la Concha formally initiated the desafuero process in late 2004. The timing of the desafuero made it very likely that López Obrador would be disqualified from running for the presidency. To make matters even more dramatic, by late 2004 López Obrador was maintaining a commanding 10 to 12 point lead in the polls as well as maintaining a high approval rating for his mayorship of Mexico City. As such, it was widely suspected at the time that Macedo de la Concha purposefully delayed the investigation so that the *desafuero* would disqualify López Obrador from the 2006 presidential election. By April of 2005, López Obrador was considered a shoo-in as the PRD presidential candidate and the odds on favorite to win the upcoming presidential election.[^2] Therefore, the desafuero of López Obrador created the perception of official abuse of power by the Fox administration, among the electorate. This perception was reinforced by the fact that the PRI and the PAN legislators in the *Cámara de Diputados* had recently formed a majority alliance to support the desafuero of López Obrador.
 
-![Illustration 1: Notice that López Obrador's numbers are the highest just two days after his desafuero.](/images/papers/symbols-of-political-competition-and-leadership/illustration-1.png)
+![Illustration 1: Notice that López Obrador's numbers are the highest just two days after his desafuero.](/images/archive/symbols-of-political-competition-and-leadership/illustration-1.png)
 
 *Illustration 1: Notice that López Obrador's numbers are the highest just two days after his desafuero.*
 
@@ -124,7 +125,7 @@ The overwhelming support that he received during the protest rally of April 7 of
 
 The posting of López Obrador's bail, by the PAN, denied him the full use of the symbolic weapon of political martyrdom. The issue of his disqualification remained and pressure from the media, NGOs such as the Carter Center, Mexican intellectuals and some members of the PRI and PAN, was brought increasingly to bear on President Fox to resolve this situation immediately. Soon thereafter President Fox fired the Attorney General, Macedo de la Concha, and replaced him with Daniel Cabeza de Vaca Hernández, who later dropped the charges against López Obrador, thereby freeing him to run as the PRD presidential candidate.
 
-![Poll standings, December 2005 – January 2006](/images/papers/symbols-of-political-competition-and-leadership/illustration-2.png)
+![Poll standings, December 2005 – January 2006](/images/archive/symbols-of-political-competition-and-leadership/illustration-2.png)
 
 While López Obrador was unable to fully capitalize from the symbolic advantages that his political martyrdom would have offered he did emerge from his desafuero as the leading candidate for office. López Obrador's early lead in the presidential race turned out to be a mixed blessing. While all the presidential candidates envied his 10 to 12 point lead in the public polls, López Obrador's lead also made him a conspicuous target in the media strategies of his opponents.[^5] In the following section, the media strategies of the Calderón and López Obrador campaigns are compared and contrasted to reveal the underlying themes of the political discourse in Mexico during the 2006 Presidential Election.
 

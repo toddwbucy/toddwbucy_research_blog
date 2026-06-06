@@ -4,8 +4,8 @@ weight: 50
 bookCollapseSection: true
 ---
 
-Superseded versions of framework documents and papers. Pages here are kept at stable URLs so existing citations continue to resolve. Each archived page links forward to its current version.
+Older and archived works, kept at stable URLs so existing citations continue to resolve.
 
-## Archived versions
+## Archived works
 
-- [The Heteropoietic Agency Hypothesis — DRAFT v30 (2026-05-20)]({{< relref "/archive/weavertools-hypothesis-2026-05-20.md" >}}) — superseded by the [current version]({{< relref "/projects/weavertools/hypothesis.md" >}}).
+- [Symbols of Political Competition and Leadership: The Case of the Mexican Presidential Election of 2006]({{< relref "/archive/symbols-of-political-competition-and-leadership.md" >}}) — undergraduate honors thesis, Department of Anthropology, University of Texas at San Antonio, 2007.

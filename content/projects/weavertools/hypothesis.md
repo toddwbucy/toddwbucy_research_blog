@@ -8,7 +8,7 @@ version: "DRAFT v05.0 — 2026-06-05"
 tags: ["weavertools", "ai-architecture", "agents", "heteropoietic-agency", "autopoiesis", "individuation", "philosophy-of-mind"]
 abstract: |
   The Heteropoietic Agency Hypothesis (HAH) claims that a distinct class of artificial agency — heteropoietic, individuated, autonomically coordinated, and identity-continuous through accumulated experience — is producible through a single architectural commitment to individuation, serves workload classes that current stateless infrastructure serves poorly or only at high cost, and is meaningfully distinct from both AGI and ANI framings. This is the canonical statement of the hypothesis: the propositions composing it, the predictions that would confirm or falsify each, and the empirical program. WeaverTools is the experimental apparatus testing it.
-supersedes: "https://toddwbucy.github.io/toddwbucy_research_blog/archive/weavertools-hypothesis-2026-05-20/"
+supersedes: ""
 superseded_by: ""
 cite:
   bibtex: |
