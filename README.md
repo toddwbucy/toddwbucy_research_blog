@@ -6,24 +6,41 @@ Stack: [Hugo](https://gohugo.io) + [Hugo Book theme](https://github.com/alex-shp
 
 ## One-time setup on a new machine
 
+### 1. SSH identity
+
+The repo is cloned through the `github-toddwbucy` SSH alias rather than plain
+`github.com`, so pushes always go out under the right GitHub identity. That
+alias lives in `~/.ssh/config`, which a reinstall does **not** carry over —
+recreate it before cloning:
+
 ```bash
-# 1. Clone with the theme submodule
-git clone --recurse-submodules git@github-toddwbucy:toddwbucy/toddwbucy_research_blog.git
+cat >> ~/.ssh/config <<'EOF'
+
+Host github-toddwbucy
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+EOF
+chmod 600 ~/.ssh/config
+
+# Verify — should greet you by username
+ssh -T git@github-toddwbucy
+```
+
+If `~/.ssh/id_ed25519` is also gone, generate a fresh key and register it at
+<https://github.com/settings/keys> first.
+
+### 2. Clone with the theme submodule
+
+```bash
+git clone --recurse-submodules \
+  git@github-toddwbucy:toddwbucy/toddwbucy_research_blog.git
 cd toddwbucy_research_blog
 
-# 2. Install Hugo extended ≥ 0.158
-#    (Mint/Ubuntu's apt version is too old for Hugo Book's modern layouts.
-#    Grab the latest extended .deb directly:)
-LATEST=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest \
-         | grep -oP '"tag_name":\s*"\K[^"]+')
-VER=${LATEST#v}
-curl -fsSL -o /tmp/hugo.deb \
-  "https://github.com/gohugoio/hugo/releases/download/${LATEST}/hugo_extended_${VER}_linux-amd64.deb"
-sudo dpkg -i /tmp/hugo.deb
-
-# 3. Verify
-hugo version
-# Expect: hugo vX.Y.Z+extended ...
+# Commit identity — also not inherited from a bare reinstall
+git config user.name  "Todd W. Bucy"
+git config user.email "todd@bucy-medrano.me"
 ```
 
 If the submodule wasn't pulled (you forgot `--recurse-submodules`), run:
@@ -31,6 +48,56 @@ If the submodule wasn't pulled (you forgot `--recurse-submodules`), run:
 ```bash
 git submodule update --init --recursive
 ```
+
+### 3. Install Hugo (extended)
+
+The theme compiles its own Sass via `css.Sass`, so the **extended** build is
+mandatory — the plain build fails at render time. Pin it to the version the
+deploy workflow uses (`HUGO_VERSION` in `.github/workflows/deploy.yml`,
+currently **0.161.1**) so local previews match CI exactly.
+
+**Portable — any distro, no root** (recommended):
+
+```bash
+VER=0.161.1   # keep in sync with .github/workflows/deploy.yml
+curl -fsSL "https://github.com/gohugoio/hugo/releases/download/v${VER}/hugo_extended_${VER}_linux-amd64.tar.gz" \
+  | tar xz -C /tmp hugo
+install -Dm755 /tmp/hugo ~/.local/bin/hugo
+```
+
+Ensure `~/.local/bin` is on your `PATH`.
+
+**Arch / CachyOS** — convenient, but the rolling package drifts ahead of the
+version CI builds with:
+
+```bash
+sudo pacman -S hugo
+```
+
+**Debian / Ubuntu / Mint** — the apt package is too old for Hugo Book's
+layouts; install the release `.deb` directly:
+
+```bash
+VER=0.161.1
+curl -fsSL -o /tmp/hugo.deb \
+  "https://github.com/gohugoio/hugo/releases/download/v${VER}/hugo_extended_${VER}_linux-amd64.deb"
+sudo dpkg -i /tmp/hugo.deb
+```
+
+### 4. Verify
+
+```bash
+hugo version
+# Expect: hugo v0.161.1+extended linux/amd64 ...
+#         The "+extended" suffix is what matters.
+
+hugo --gc --minify --baseURL "https://toddwbucy.github.io/toddwbucy_research_blog/"
+# Expect: a clean build (~110 pages), no errors.
+```
+
+Note that `hugo server` serves at `http://localhost:1313/` — it overrides
+`baseURL`, so the `/toddwbucy_research_blog/` subpath does *not* apply
+locally. Only production builds carry the path prefix.
 
 ## Authoring workflow
 
